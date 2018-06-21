@@ -7,23 +7,24 @@ var menuRight=document.getElementById("cbp-spmenu-1"),
     hideRight=document.getElementById("hideRight"),
     content=document.getElementById("content"),
     isOpen=false;
-showRight.onclick=function(){
-    classie.remove(menuRight,"cbp-spmenu-close");
-    classie.add( menuRight, 'cbp-spmenu-open' );
-    isOpen=!isOpen;
-}
-hideRight.onclick=function(){
+showRight.addEventListener("click",function(){
     if(!isOpen){
-        classie.remove(menuRight,"cbp-spmenu-open");
+        classie.add( menuRight, 'cbp-spmenu-open' );
+        isOpen=!isOpen;
     }
-    isOpen=!isOpen;
-    classie.add( menuRight, 'cbp-spmenu-close' );
-}
-content.onclick=function(){
-    classie.remove(menuRight,"cbp-spmenu-open");
-    isOpen=false;
-}
-
+});
+hideRight.addEventListener("click",function(){
+    if(isOpen){
+        classie.remove(menuRight,"cbp-spmenu-open");
+        isOpen=false;
+    }
+});
+content.addEventListener("click",function(){
+    if(isOpen){
+        classie.remove(menuRight,"cbp-spmenu-open");
+        isOpen=false;
+    }
+});
 /*hello span  打字机效果*/
 $(".hello-s").typed({
     strings: ["夫君子之行","静以修身","俭以养德","非淡泊无以明志","非宁静无以致远"],
