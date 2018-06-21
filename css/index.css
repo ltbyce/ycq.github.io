@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'Glyphter';
     src: url('../fonts/Glyphter.eot');
     src: url('../fonts/Glyphter?#iefix') format('embedded-opentype'), url('../fonts/Glyphter.woff') format('woff'), url('../fonts/Glyphter.ttf') format('truetype'), url('../fonts/Glyphter.svg#Glyphter') format('svg');
@@ -62,53 +62,179 @@ img { max-width: 100%; }
     line-height:0;
     font-size:0;
     overflow:hidden;
+}*/
+body {
+    color: #2f2f2f;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #fff;
 }
-
-
-
-
-
-
-
-.content{
+img { max-width: 100%; }
+a:hover {
+    text-decoration: none;
+    color: #818181;
+}
+#content{
     position: absolute;
     width:100%;
     height:100%;
 }
-/*.content::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    content: '';
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    -webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
-    transition: opacity 0.4s, transform 0s 0.4s;
-    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}*/
-.header{
-    position: fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:50px;
-    border-bottom:1px solid #f1f1f1;
+#s-hello,#s-life,#s-writing#s-warning,#section6,#s-hello,#s-skill{
+    transition: .3s ease-out;
+}
+
+.navme{
+    opacity: .7;
     background: #fff;
-    opacity: .8;
-    z-index:9999999;
-    padding:0 20px;
+    padding:0;
+    margin:0;
+}
+.op{
+    opacity: .7;
+    background: #fff;
+    padding: 0;
+    margin:0;
+}
+.op img{
+    height:80%;
+    display: block;
+    margin-top:10%;
+}
+.nav-right,.nav-right:focus,.nav-right:hover{
+    width:35px;
+    height:30px;
+    position: fixed;
+    top:0;
+    right:0;
+    opacity: 1;
+    margin-top:15px;
+    margin-right:35px;
+    background: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+.nav-right span{
+    display: block;
+    position: absolute;
+    width: 90%;
+    background: #2f2f2f;
+    border-radius: 9px;
+    opacity: 1;
+    height:1px;
+    left: 0;
+}
+.nav-right span:first-child{
+    top:0;
+}
+.nav-right span:last-child{
+    top:18px;
+}
+.nav-right span:nth-child(2){
+    top:9px;
+}
+.nav-right:hover{
+    opacity: .5;
+}
+
+
+.btn-close{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    width:10%;
+    font-weight: 800;
+    font-size:2em;
+    color:#fff;
+    float: right;
+    cursor: pointer;
+}
+.btn-close:hover{
+    color:#fff;
+}
+.cbp-spmenu {
+    background: #47a3da;
+    position: fixed;
+    z-index: 999999;
+}
+.cbp-spmenu a {
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
 
 }
-.header img{
-    height:40px;
-    min-height:100%;
-    margin-top:8px;
+.cbp-spmenu-vertical a{
+    padding:1em;
+    text-transform: lowercase;
+}
+
+.cbp-spmenu-vertical a:hover{
+    padding: 1.5em;
+    transition: .5s ease;
+}
+.cbp-spmenu-vertical {
+    width: 220px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    padding:3em 1em 0 2em;
+    background: #2f2f2f;
+    letter-spacing: .5em;
+}
+.cbp-spmenu-right {
+    right: -300px;
+}
+.cbp-spmenu-right.cbp-spmenu-open {
+    right: 0px;
+}
+.cbp-spmenu-right.cbp-spmenu-close {
+    right: -300px;
+}
+.cbp-spmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    z-index: 999999;
+
+}
+.cbp-spmenu,
+.cbp-spmenu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+@media screen and(max-width:480px){
+    .cbp-spmenu-right {
+        right: -190px;
+    }
+    .cbp-spmenu-vertical {
+        font-size: 90%;
+        width: 190px;
+    }
+    .cbp-spmenu-push{
+        width:190px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.gl-right button,.gl-right span{
+    border:none;
+    background: #fff;
+    opacity: .8;
+    height:100%;
+    width:100%;
 }
 #s-hello{
     background:url("../images/hero1.jpeg");
