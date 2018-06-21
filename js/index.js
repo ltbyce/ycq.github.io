@@ -19,12 +19,12 @@ hideRight.addEventListener("click",function(){
         isOpen=false;
     }
 });
-content.addEventListener("click",function(){
+/*content.addEventListener("click",function(){
     if(isOpen){
         classie.remove(menuRight,"cbp-spmenu-open");
         isOpen=false;
     }
-});
+});*/
 /*hello span  打字机效果*/
 $(".hello-s").typed({
     strings: ["夫君子之行","静以修身","俭以养德","非淡泊无以明志","非宁静无以致远"],
