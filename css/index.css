@@ -124,6 +124,7 @@ a:hover {
     opacity: 1;
     height:1px;
     left: 0;
+    cursor:pointer;
 }
 .nav-right span:first-child{
     top:0;
@@ -164,6 +165,7 @@ a:hover {
     color: #fff;
     font-size: 1.1em;
     font-weight: 300;
+    transition: .8s ease-out;
 
 }
 .cbp-spmenu-vertical a{
@@ -173,7 +175,7 @@ a:hover {
 
 .cbp-spmenu-vertical a:hover{
     padding: 1.5em;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 .cbp-spmenu-vertical {
     width: 220px;
@@ -201,9 +203,9 @@ a:hover {
 }
 .cbp-spmenu,
 .cbp-spmenu-push {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 @media screen and(max-width:480px){
     .cbp-spmenu-right {
@@ -386,7 +388,94 @@ a:hover {
     padding:100px 0;
     width:100%;
 }
-
+.skill-pro{
+    width:100%;
+    margin-bottom:30px;
+}
+.skill-mbox{
+    height:10px;
+    background: #f6f6f6;
+    position: relative;
+}
+.skill-pbox{
+    width:0;
+    height:60%;
+    transition: 2.5s ease-in;
+    background: #818181;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+.skill-pbox>span{
+    display: none;
+    position: absolute;
+    top:-25px;
+    right:-20px;
+    background: #818181;
+    color:#fff;
+    font-size: 12px;
+    width:40px;
+    height:18px;
+    text-align: center;
+    line-height: 18px;
+}
+.skill-pbox>span:after{
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    top: 17px;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #818181;
+}
+/*.s-progress{
+    transition: .6s ease-in;
+}
+.s-progress ul{
+    list-style: none;
+}
+.s-progress ul{
+    transition: .6s ease-in;
+}
+.progress{
+    height:10px;
+    background: #f6f6f6;
+    margin-bottom:35px;
+    position: relative;
+}
+.progress-bar{
+    height:60%;
+    ling-height:60%;
+    transition: .6s ease-in;
+    background: #818181;
+    position: relative;
+}
+.progress-bar .pro-span{
+    display: block;
+    position: absolute;
+    top:-30px;
+    right:0;
+    background: #818181;
+    padding:1px 2px;
+    color:red;
+    border:1px solid red;
+}
+.progress-bar>span{
+    display: block;
+    position: absolute;
+    top:-30px;
+    right:0;
+    background: #818181;
+    padding:1px 2px;
+    color:red;
+    border:1px solid red;
+    z-index: 30;
+}
+.progress-bar,.progress{
+    border-radius:0;
+}*/
 .c-al{
     list-style: none;
     display: inline-block;
