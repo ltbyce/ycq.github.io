@@ -20,10 +20,13 @@ hideRight.addEventListener("click",function(){
     }
 });
 /*content.addEventListener("click",function(){
-    if(isOpen){
-        classie.remove(menuRight,"cbp-spmenu-open");
-        isOpen=false;
-    }
+ if(isOpen){
+ classie.remove(menuRight,"cbp-spmenu-open");
+ isOpen=false;
+ }
+ });*/
+/*$("#cbp-spmenu-1>a").click(function(){
+    $('html,body').animate({scrollTop:$(this).offset().top}, 800);
 });*/
 /*hello span  打字机效果*/
 $(".hello-s").typed({
@@ -33,8 +36,6 @@ $(".hello-s").typed({
     // loop
     loop: true
 });
-
-
 /*blog模块 瀑布流布局*/
 /*$(function(){
     var divWidth=$(".blg-item").innerWidth();
@@ -71,7 +72,6 @@ $(".hello-s").typed({
 }();
 
 
-
 /*文章模块的动画效果*/
 /*JQuery旋转木马*/
 $(".owl-carousel").owlCarousel({
@@ -98,4 +98,11 @@ $('.owl-carousel2').owlCarousel({
     autoPlay : false,
     baseClass : "owl-carousel",
     theme : "owl-theme"
+});
+/*技能进度条*/
+$(function(){
+    $.each($(".skill-pbox"),function() {
+        $(this).width($(this).text());
+        $(this).children("span").delay(2600).show(500);
+    });
 });
