@@ -90,6 +90,11 @@ a:hover {
     transform: translateX(-50%) translateY(-50%);
     width:50%;
 }
+.begin img{
+    width:100%;
+    height:100%;
+    background-size: cover;
+}
 #content{
     position: absolute;
     width:100%;
@@ -204,7 +209,7 @@ a:hover {
     z-index: 77777;
 }
 .cbp-spmenu-vertical {
-    width: 220px;
+    width: 300px;
     height: 100%;
     top: 0;
     z-index: 77777;
@@ -220,30 +225,25 @@ a:hover {
 .cbp-spmenu-right.cbp-spmenu-close {
     right: -300px;
 }
-.cbp-spmenu-push {
+/*.cbp-spmenu-push {
     display: block;
     padding:30px;
     overflow-x: hidden;
     position: relative;
     z-index: 77777;
-
-}
+}*/
 .cbp-spmenu,
 .cbp-spmenu-push {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-@media screen and(max-width:480px){
-    .cbp-spmenu-right {
-        right: -190px;
+@media screen and (max-width:480px){
+    .cbp-spmenu-vertical{
+        width:220px;
     }
-    .cbp-spmenu-vertical {
-        font-size: 90%;
-        width: 190px;
-    }
-    .cbp-spmenu-push{
-        width:190px;
+    .begin{
+        width:100%;
     }
 }
 
@@ -453,52 +453,6 @@ a:hover {
     border-right: 5px solid transparent;
     border-top: 5px solid #818181;
 }
-/*.s-progress{
-    transition: .6s ease-in;
-}
-.s-progress ul{
-    list-style: none;
-}
-.s-progress ul{
-    transition: .6s ease-in;
-}
-.progress{
-    height:10px;
-    background: #f6f6f6;
-    margin-bottom:35px;
-    position: relative;
-}
-.progress-bar{
-    height:60%;
-    ling-height:60%;
-    transition: .6s ease-in;
-    background: #818181;
-    position: relative;
-}
-.progress-bar .pro-span{
-    display: block;
-    position: absolute;
-    top:-30px;
-    right:0;
-    background: #818181;
-    padding:1px 2px;
-    color:red;
-    border:1px solid red;
-}
-.progress-bar>span{
-    display: block;
-    position: absolute;
-    top:-30px;
-    right:0;
-    background: #818181;
-    padding:1px 2px;
-    color:red;
-    border:1px solid red;
-    z-index: 30;
-}
-.progress-bar,.progress{
-    border-radius:0;
-}*/
 .c-al{
     list-style: none;
     display: inline-block;
@@ -532,18 +486,6 @@ a:hover {
     letter-spacing: .1em;
     font-size: 0.9em;
 }
-.a-bg{
-    /*padding:20px 0;
-    overflow: hidden;
-    float: left;
-    position: relative;*/
-}
-/*定义关键帧动画
-第一步：上边框和下边框同时出 方向相反
-第二步 左边框和右边框同时出 方向相反
-第三步 移位 同时出来一个阴影框 位移方向相反
-*/
-
 /*blog*/
 .blog{
     width:100%;
