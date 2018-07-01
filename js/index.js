@@ -1,4 +1,17 @@
-
+/*window.onload=function(){
+    var loading=document.getElementById("loading");
+    loading.parentNode.removeChild(loading);
+}*/
+/*
+document.onreadystatechange=completeLoading;
+function completeLoading(){
+    if(document.readyState=="complete"){
+        alert("加载完毕");
+        var loading=document.getElementById("loading");
+        loading.parentNode.removeChild(loading);
+    }
+}
+*/
 
 
 /*导航边栏*/
@@ -28,6 +41,14 @@ hideRight.addEventListener("click",function(){
 /*$("#cbp-spmenu-1>a").click(function(){
     $('html,body').animate({scrollTop:$(this).offset().top}, 800);
 });*/
+
+/*导航栏平滑过渡*/
+$(".date-list li a").click(function(){
+    $("html,body").animate({
+        scrollTop:$($(this).attr("href")).offset().top-50+"px"
+    },500);
+
+});
 /*hello span  打字机效果*/
 $(".hello-s").typed({
     strings: ["夫君子之行","静以修身","俭以养德","非淡泊无以明志","非宁静无以致远"],
@@ -64,13 +85,6 @@ $(".hello-s").typed({
     }
     waterFlow();
 });*/
-~function(){
-    minigrid('.blg-item', '.con-item',29, null,);
-    window.addEventListener('resize', function(){
-        minigrid('.blg-item', '.con-item');
-    });
-}();
-
 
 /*文章模块的动画效果*/
 /*JQuery旋转木马*/
