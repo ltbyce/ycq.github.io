@@ -201,13 +201,13 @@ a:hover {
 .cbp-spmenu {
     background: #47a3da;
     position: fixed;
-    z-index: 999999;
+    z-index: 77777;
 }
 .cbp-spmenu-vertical {
     width: 220px;
     height: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 77777;
     background: #2f2f2f;
     letter-spacing: .5em;
 }
@@ -225,7 +225,7 @@ a:hover {
     padding:30px;
     overflow-x: hidden;
     position: relative;
-    z-index: 999999;
+    z-index: 77777;
 
 }
 .cbp-spmenu,
