@@ -32,22 +32,11 @@ hideRight.addEventListener("click",function(){
         isOpen=false;
     }
 });
-/*content.addEventListener("click",function(){
- if(isOpen){
- classie.remove(menuRight,"cbp-spmenu-open");
- isOpen=false;
- }
- });*/
-/*$("#cbp-spmenu-1>a").click(function(){
-    $('html,body').animate({scrollTop:$(this).offset().top}, 800);
-});*/
-
 /*导航栏平滑过渡*/
 $(".date-list li a").click(function(){
     $("html,body").animate({
         scrollTop:$($(this).attr("href")).offset().top-50+"px"
     },500);
-
 });
 /*hello span  打字机效果*/
 $(".hello-s").typed({
@@ -57,35 +46,14 @@ $(".hello-s").typed({
     // loop
     loop: true
 });
-/*blog模块 瀑布流布局*/
-/*$(function(){
-    var divWidth=$(".blg-item").innerWidth();
-    var mainWidth=$(".blg-main").width();
-    var num=Math.floor(mainWidth/divWidth);
-    function waterFlow(){
-        var arr=[];
-        for(var i=0;i<$(".blg-item").length;i++){
-            if(i<num){
-                arr[i]=$(".blg-item").eq(i).innerHeight();
-            }else{
-                var minImgHeight=Math.min.apply(null,arr);
-                var index=getMinIndex(arr,minImgHeight);
-                $(".blg-item").eq(i).css({"position":"absolute","top":minImgHeight+"px","left":($(".blg-item").eq(index).offset().left-189.6)+"px"});
-                console.log($(".blg-item").eq(index).offset());
-                arr[index]+=$(".blg-item").eq(i).innerHeight();
-            }
-        }
-    }
-    function getMinIndex(arr,min){
-        for(var i in arr){
-            if(arr[i]==min){
-                return i;
-            }
-        }
-    }
-    waterFlow();
-});*/
-
+/*blog模块*/
+/*旋转的八卦*/
+$("#bagua").click(function(){
+    window.open('./html/bagua.html','','width=1000,height=600');
+});
+$("#adv1").click(function(){
+    window.open('./html/adv1.html','','width=1000,height=600');
+});
 /*文章模块的动画效果*/
 /*JQuery旋转木马*/
 $(".owl-carousel").owlCarousel({
