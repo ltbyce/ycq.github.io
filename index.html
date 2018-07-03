@@ -6,7 +6,7 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main</title>
   <!--style-->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -394,7 +394,7 @@
         <div class="con-items">
          <p class="blg-img"><img src="images/blog-1.png"></p>
          <span>06/06/2018</span>
-         <h3 class="blg-title">Lorem</h3>
+         <h3 class="blg-title"><span id="bagua">旋转的八卦</span></h3>
          <p class="blg-con">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque eos exercitationem harum id impedit inventore iusto labore laudantium libero officia quas, sed voluptate? Accusantium dicta modi numquam soluta voluptatibus.</p>
         </div>
        </div>
@@ -402,7 +402,7 @@
         <div class="con-items">
          <p class="blg-img"><img src="images/blog-2.jpg"></p>
          <span>06/06/2018</span>
-         <h3 class="blg-title">Lorem</h3>
+         <h3 class="blg-title"><span id="adv1">广告1</span></h3>
          <p class="blg-con">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aliquam blanditiis corporis cupiditate debitis eos explicabo illum incidunt magnam nam nesciunt odio omnis, optio placeat quo recusandae vel vero.</p>
         </div>
        </div>
@@ -452,15 +452,6 @@
    </div>
   </div>
  </section>
- <!--<div id="footer">
-  <div class="container">
-   <div class="col-md-10 col-md-offset-1 footer-img">
-    <a href="javascript:void(0)">
-     <img src="images/my.jpg">
-    </a>
-   </div>
-  </div>
- </div>-->
 </div>
 
 
@@ -520,6 +511,9 @@
  window.addEventListener('resize', function(){
   minigrid('.blg-item', '.con-item',0, null);
  });
+
+
+$(".bagua").css("display","block");
  </script>
 <script src="js/index.js" type="text/javascript"></script>
  </body>
