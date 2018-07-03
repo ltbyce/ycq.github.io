@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>原生js八卦图</title>
+ </head>
+ <body>
+  <canvas id="canvas" width="1000xp" height="600px" style="background: #c7ffec"></canvas>
+  <script>
+		var canvas=document.getElementById("canvas");
+		var context=canvas.getContext("2d");
+		setTimeout(calc,1);
+		var ang1=180;
+		var ang2=0;
+		var ang3=180;
+		var ang4=0;
+		function calc(){
+			context.beginPath();
+			context.rect(200,200,400,400);
+			fillStyle="white";
+			context.fill();
+
+			context.beginPath();
+			context.clearRect(200,200,400,400);
+			ang1-=0.1;
+			ang2-=0.1;
+			ang3+=0.1;
+			ang4+=0.1;
+			/*这是太极的黑色半圆*/
+			context.beginPath();
+			context.arc(400,400,200,Math.PI*3/2+((ang3-180)*Math.PI)/180,Math.PI/2+((ang4)*Math.PI)/180,false);
+			context.closePath();
+			context.fill();
+			/*这是太极的白色半圆*/
+			context.beginPath();
+			context.arc(400,400,200,Math.PI/2+((ang3-180)*Math.PI)/180,Math.PI*3/2+((ang4)*Math.PI)/180,false);
+			context.fillStyle="white";
+			context.closePath();
+			context.fill();
+			//这是中等黑圆
+			context.beginPath();
+			context.arc(400+Math.sin((2*Math.PI / 360) *ang1)*100,400+Math.cos((2*Math.PI / 360)*ang1) * 100,100,Math.PI*2,0,true);
+			context.fillStyle="black";
+			context.closePath();
+			context.fill();
+			//再来一个小白圆
+			context.beginPath();
+			context.arc(400+Math.sin((2*Math.PI / 360) *ang1)*100,400+Math.cos((2*Math.PI / 360)*ang1) * 100,20,Math.PI*2,0,true);
+			context.fillStyle="white";
+			context.closePath();
+			context.fill();
+			/*这个中等白圆*/
+			context.beginPath();
+			context.arc(400+Math.sin((2*Math.PI / 360) *ang2)*100,400+Math.cos((2*Math.PI / 360)*ang2) * 100,100,Math.PI*2,0,true);
+			//context.fillStyle="black";
+			context.closePath();
+			context.fill();
+
+			/*这个小白圆*/
+			context.beginPath();
+			context.arc(400+Math.sin((2*Math.PI / 360) *ang2)*100,400+Math.cos((2*Math.PI / 360)*ang2) * 100,20,Math.PI*2,0,true);
+			context.fillStyle="black";
+			context.closePath();
+			context.fill();
+			
+
+			console.log(400+Math.cos(270)*100,400+Math.sin(270)*100);
+			setTimeout(calc,1);
+		}
+  </script>
+ </body>
+</html>
