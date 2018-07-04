@@ -32,12 +32,23 @@ hideRight.addEventListener("click",function(){
         isOpen=false;
     }
 });
-/*导航栏平滑过渡*/
-$(".date-list li a").click(function(){
-    $("html,body").animate({
-        scrollTop:$($(this).attr("href")).offset().top-50+"px"
-    },500);
+/*导航栏平滑过渡等*/
+$().ready(function(){
+    $(".date-list a").eq(0).addClass("active");
+    $(".date-list li a").click(function(){
+        $("html,body").animate({
+            scrollTop:$($(this).attr("href")).offset().top-50+"px"
+        },500);
+        $(".active").removeClass("active");
+        $(this).addClass('active');
+    });
 });
+
+/*$(document).scroll(function(){
+    if($(document).scrollTop()==$($(this).attr("href")).offset().top){
+        console.log(1);
+    }
+});*/
 /*hello span  打字机效果*/
 $(".hello-s").typed({
     strings: ["夫君子之行","静以修身","俭以养德","非淡泊无以明志","非宁静无以致远"],
@@ -48,11 +59,14 @@ $(".hello-s").typed({
 });
 /*blog模块*/
 /*旋转的八卦*/
-$("#bagua").click(function(){
+$(".bagua").click(function(){
     window.open('./html/bagua.html','','width=1000,height=600');
 });
-$("#adv1").click(function(){
+$(".adv1").click(function(){
     window.open('./html/adv1.html','','width=1000,height=600');
+});
+$(".sugar").click(function(){
+    window.open('./html/sugar.html','','width=1000,height=600');
 });
 /*文章模块的动画效果*/
 /*JQuery旋转木马*/
