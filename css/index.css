@@ -55,6 +55,7 @@ a:hover {
     overflow-y: auto;
 }
 .date-list>li{
+    position: relative;
     height:40px;
     line-height:40px;
     text-transform: capitalize;
@@ -64,12 +65,32 @@ a:hover {
     margin-bottom:30px;
     cursor: pointer;
 }
-.date-list>li a{
+.date-list li>a{
+    position: relative;
     color:#a5a5a5;
     text-decoration:none;
 }
-.date-list>li a:hover,.date-list>li a:focus,.date-list>li a:active{
+.date-list>li a:hover{
     color:#fff;
+}
+.date-list a.active span{
+    color:#fff;!important;
+}
+.date-list a span:before{
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left:-17%;
+    content: "";
+    width:130%;
+    height:.15em;
+    -webkit-transform: scaleX(0);
+    transition: all 0.2s ease;
+    -webkit-transform-origin: 0 100%;
+    background: #fff;
+}
+.date-list a.active span:before{
+    -webkit-transform: scaleX(1);
 }
 .op{
     opacity: .7;
@@ -707,17 +728,6 @@ a:hover {
     content:"";
 }*/
 
-.bagua{
-    position: fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:1000px;
-    height:600px;
-    z-index:9999999;
-    background: #c7ffec;
-    display:none;
-}
 
 
 
